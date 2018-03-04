@@ -3,7 +3,7 @@
 import time, datetime, re, urllib.request
 from html.parser import HTMLParser
 
-DEFAULT_LOG_PATH = '~/Desktop/git-megasaturnv/nanpy-blinds-control/log.csv'
+DEFAULT_LOG_PATH = './log.csv'
 MOTOR_CONTROLLER_POWER_PIN = 9 # Connects to a monostable 555 through a capacitor. When HIGH power will be given to the motor controller for 30 seconds via NPN transistor (consisting of an NPN transistor and a PNP power transistor), as a safety precaution incase the arduino crashes
 MOTOR_CONTROLLER_POWER_RESET_PIN = 10 # When HIGH the 555 is not reset and the 555 output is allowed to go high if MOTOR_CONTROLLER_POWER_PIN is high
 MOTOR_CURRENT_PIN = 15 #Input pin for current sensing the motor controller via a MAX471 ic. Note pin: 0, 8 and 14 are all A0 in nanpy. (0-7 = A0-A7, 8-13 = A0-A5, 14-22 = A0-A7)
